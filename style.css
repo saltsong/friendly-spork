@@ -259,3 +259,50 @@ main {
 h1 {
   margin-bottom: 0.25em !important;
 }
+/* =========================
+   PAGE CARD ROW (3 COL GRID)
+   ========================= */
+
+.page-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  margin-top: 2em;
+}
+
+/* Card style */
+.page-card {
+  display: block;
+  background: var(--neon-yellow);
+  color: #000;
+  text-decoration: none;
+  padding: 1.25em;
+  border: 3px solid #000;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* Card title */
+.page-card h3 {
+  margin: 0 0 0.5em 0;
+  font-family: "VC Honey Deck", serif;
+}
+
+/* Card text */
+.page-card p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Hover effect */
+.page-card:hover {
+  transform: translateY(-4px) rotate(-0.5deg);
+  box-shadow: 6px 6px 0 #000;
+}
+
+/* MOBILE: stack cards */
+@media (max-width: 800px) {
+  .page-cards {
+    grid-template-columns: 1fr;
+  }
+}
