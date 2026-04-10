@@ -243,3 +243,21 @@ footer {
   background-color: var(--neon-yellow);
   color: black;
 }
+/* tighten header to content spacing */
+header {
+  margin-bottom: 0.5em;
+}
+
+/* remove top spacing from first content block */
+main {
+  padding-top: 0.5em;
+}
+
+/* kill default top margin on first heading */
+main h1,
+main h2,
+main h3,
+main article:first-child h1,
+main article:first-child h2 {
+  margin-top: 0;
+}
