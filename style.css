@@ -246,3 +246,16 @@ footer {
 h1, h2, h3 {
   margin-top: 0.5em;
 }
+/* FORCE REMOVE TEMPLATE SPACING */
+header {
+  margin-bottom: 0 !important;
+}
+
+main {
+  margin-top: 0 !important;
+  padding-top: 0.25em !important;
+}
+
+h1 {
+  margin-bottom: 0.25em !important;
+}
