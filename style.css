@@ -341,3 +341,40 @@ footer a:hover svg {
   fill: var(--neon-yellow);
   transform: translateY(-2px);
 }
+/* Wrap the whole list */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* Each post item */
+.post-list li {
+  list-style: none;
+  background: var(--neon-yellow);
+  padding: 1em 1.2em;
+  border: 2px solid #000;
+  transition: all 0.2s ease;
+}
+
+/* Make the whole card clickable-looking */
+.post-list li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  display: block;
+}
+
+/* Hover effect */
+.post-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 4px 0 #000;
+}
+
+/* Optional: date/meta inside */
+.post-list small {
+  display: block;
+  font-size: 0.8em;
+  margin-top: 0.3em;
+  color: #222;
+}
