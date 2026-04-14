@@ -333,3 +333,11 @@ footer p {
   text-align: center;
   margin-top: 1em;
 }
+footer a svg {
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+footer a:hover svg {
+  fill: var(--neon-yellow);
+  transform: translateY(-2px);
+}
