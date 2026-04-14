@@ -341,14 +341,16 @@ footer a:hover svg {
   fill: var(--neon-yellow);
   transform: translateY(-2px);
 }
-/* Wrap the whole list */
+/* Grid layout */
 .post-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2em; /* space between cards */
+  padding: 0;
+  margin: 0;
 }
 
-/* Each post item */
+/* Each card */
 .post-list li {
   list-style: none;
   background: var(--neon-yellow);
@@ -357,7 +359,7 @@ footer a:hover svg {
   transition: all 0.2s ease;
 }
 
-/* Make the whole card clickable-looking */
+/* Link fills the card */
 .post-list li a {
   text-decoration: none;
   color: #000;
@@ -367,14 +369,25 @@ footer a:hover svg {
 
 /* Hover effect */
 .post-list li:hover {
-  transform: translateY(-3px);
-  box-shadow: 4px 4px 0 #000;
+  transform: translateY(-4px);
+  box-shadow: 5px 5px 0 #000;
 }
 
-/* Optional: date/meta inside */
+/* Optional meta text */
 .post-list small {
   display: block;
   font-size: 0.8em;
   margin-top: 0.3em;
   color: #222;
+}
+@media (max-width: 900px) {
+  .post-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .post-list {
+    grid-template-columns: 1fr;
+  }
 }
